@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lucky Ps - How To Play</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0e0e0e;
+            color: #ffffff;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            margin: 15px 0 5px;
+            color: #00ff88;
+        }
+
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background: #00ff88;
+            color: #000;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: 0.2s;
+        }
+
+        .buttons a:hover {
+            background: #00cc6e;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tabs button {
+            background: #1e1e1e;
+            color: #fff;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .tabs button.active {
+            background: #00ff88;
+            color: #000;
+        }
+
+        .guide {
+            display: none;
+            background: #151515;
+            padding: 20px;
+            border-radius: 10px;
+            line-height: 1.6;
+        }
+
+        .guide.active {
+            display: block;
+        }
+
+        .guide h2 {
+            color: #00ff88;
+            margin-top: 0;
+        }
+
+        .copy-btn {
+            background: #00ff88;
+            color: #000;
+            border: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+            margin-bottom: 15px;
+        }
+
+        .copy-btn:hover {
+            background: #00cc6e;
+        }
+
+        pre {
+            background: #0e0e0e;
+            padding: 12px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <header>
+        <h1>Lucky PS</h1>
+        <p>How To Play Guide</p>
+    </header>
+
+    <div class="buttons">
+        <a href="https://discord.com/channels/1424751058172776551/1425069670674726932" target="_blank">Help</a>
+        <a href="https://discord.gg/JKHycKmJk" target="_blank">HTP</a>
+        <a href="https://discord.gg/4bFbVJZbAd" target="_blank">Main Server</a>
+    </div>
+
+    <div class="tabs">
+        <button class="active" onclick="showGuide('android', this)">ANDROID</button>
+        <button onclick="showGuide('ios', this)">IOS</button>
+        <button onclick="showGuide('pc', this)">PC</button>
+    </div>
+
+    <!-- ANDROID -->
+    <div id="android" class="guide active">
+        <h2>📱 Android Setup Guide</h2>
+        <p>
+            This guide only for Android users. Please follow these steps for better results.
+            If having a problem click the help button for assistance.
+        </p>
+
+        <a href="https://powertunnel.en.uptodown.com/android/download" target="_blank">
+            <button class="copy-btn">⬇️ Powertunnel (Download)</button>
+        </a>
+
+        <ol>
+            <li>Download <b>Powertunnel</b> using the button above.</li>
+            <li>Open the <b>Powertunnel</b> app.</li>
+            <li>Click the three-line menu, then open host settings.</li>
+            <li>Paste the Powertunnel host URL.</li>
+            <li>Change host update period from <b>12 hours</b> to <b>On Start</b>.</li>
+            <li>Open Growtopia and connect. Server Name: <b>Lucky</b></li>
+        </ol>
+    </div>
+
+    <!-- IOS -->
+    <div id="ios" class="guide">
+        <h2>🍏 IOS Setup Guide</h2>
+        <p>
+            This setup guide is only for IOS users. Please follow these steps for better result.
+            If having a problem click the help button for assistance.
+        </p>
+
+        <button class="copy-btn" onclick="copyIOSHost()">
+            📋 iOS Host (Surge 5)
+        </button>
+
+        <ol>
+            <li>Download the app <b>Surge 5</b> from the App Store.</li>
+            <li>Press <b>OK</b>.</li>
+            <li>Click on <b>Default.conf</b>.</li>
+            <li>Click <b>IMPORT</b> → Download Profile from URL.</li>
+            <li>Paste the copied iOS Host URL, then press <b>OK</b> and <b>Done</b>.</li>
+            <li>Press <b>SETUP</b> and allow VPN configuration.</li>
+            <li>Done! Open <b>Growtopia</b> and connect. Server Name : Lucky</li>
+        </ol>
+    </div>
+
+    <!-- PC -->
+    <div id="pc" class="guide">
+        <h2>💻 PC Setup Guide</h2>
+        <p>
+            This guide only for Windows PC users. Please follow these steps for better results.
+            If having a problem click the help button for assistance.
+        </p>
+        <ol>
+            <li>Press <b>⊞ Win + R</b> to open Run.</li>
+            <li>Type: <b>C:\Windows\System32\drivers\etc</b></li>
+            <li>Find the file named <b>hosts</b>.</li>
+            <li>Right-click and edit with Notepad.</li>
+            <li>Add these lines:</li>
+        </ol>
+        <pre>
+91.134.85.13 growtopia1.com
+91.134.85.13 growtopia2.com
+91.134.85.13 www.growtopia1.com
+91.134.85.13 www.growtopia2.com
+        </pre>
+        <p>Save the file and log in to Growtopia. Server Name : Lucky</p>
+    </div>
+
+    <footer>
+        © 2026 Lucky Ps • All Rights Reserved • Made By Krand
+    </footer>
+
+</div>
+
+<script>
+    function showGuide(id, btn) {
+        document.querySelectorAll('.guide').forEach(g => g.classList.remove('active'));
+        document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        btn.classList.add('active');
+    }
+
+    function copyIOSHost() {
+        const url = "https://dash.gtps.cloud/ios/1870";
+        navigator.clipboard.writeText(url).then(() => {
+            alert("✅ iOS Host copied to clipboard!");
+        });
+    }
+</script>
+
+</body>
+</html>
