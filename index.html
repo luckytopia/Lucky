@@ -131,9 +131,9 @@
     </header>
 
     <div class="buttons">
-        <a href="https://discord.com/channels/1424751058172776551/1425069670674726932" target="_blank">Help</a>
-        <a href="https://discord.gg/JKHycKmJk" target="_blank">HTP</a>
         <a href="https://discord.gg/4bFbVJZbAd" target="_blank">Main Server</a>
+        <a href="https://discord.gg/JKHycKmJk" target="_blank">HTP</a>
+        <a href="https://discord.com/channels/1424751058172776551/1425069670674726932" target="_blank">Help</a>
     </div>
 
     <div class="tabs">
@@ -150,9 +150,15 @@
             If having a problem click the help button for assistance.
         </p>
 
+<button class="copy-btn" onclick="copyAndroidHost()">
+         📱   Android  Host
+        </button>
+
         <a href="https://powertunnel.en.uptodown.com/android/download" target="_blank">
             <button class="copy-btn">⬇️ Powertunnel (Download)</button>
         </a>
+        
+        
 
         <ol>
             <li>Download <b>Powertunnel</b> using the button above.</li>
@@ -196,7 +202,7 @@
         </p>
         <ol>
             <li>Press <b>⊞ Win + R</b> to open Run.</li>
-            <li>Type: <b>C:\Windows\System32\drivers\etc in text box.</b></li>
+            <li>Type: <b>C:\Windows\System32\drivers\etc</b></li>
             <li>Find the file named <b>hosts</b>.</li>
             <li>Right-click and edit with Notepad.</li>
             <li>Add these lines:</li>
@@ -224,6 +230,16 @@
         btn.classList.add('active');
     }
 
+function copyAndroidHost() {
+    const url = "https://dash.gtps.cloud/android/1870";
+    
+    navigator.clipboard.writeText(url).then(() => {
+        alert("📱 Android Host copied to clipboard!");
+    }).catch(err => {
+        alert("❌ Failed to copy Android Host.");
+        console.error(err);
+    });
+} 
     function copyIOSHost() {
         const url = "https://dash.gtps.cloud/ios/1870";
         navigator.clipboard.writeText(url).then(() => {
@@ -233,5 +249,4 @@
 </script>
 
 </body>
-
-</html>
+                </html>
